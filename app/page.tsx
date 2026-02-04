@@ -46,7 +46,7 @@ const staggerItem = {
   },
 }
 
-export default function Home() {
+export default function Home(): React.JSX.Element {
   return (
     <div className="min-h-screen bg-black text-white overflow-x-hidden">
       <NavBar />
@@ -63,14 +63,14 @@ export default function Home() {
             className="text-5xl font-bold tracking-tight mb-6 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent"
             variants={staggerItem}
           >
-            Desarrollador Web Full Stack
+            Hola, Soy Guille y este es mi portfolio
+
           </motion.h1>
           <motion.p
             className="text-xl text-gray-400 mb-8"
             variants={staggerItem}
           >
-            Transformando ideas en experiencias digitales excepcionales. Especializado en crear aplicaciones web
-            modernas y de alto rendimiento.
+            Desarrollo aplicaciones web escalables combinando frontend, backend, cloud e integración con inteligencia artificial. Enfocado en crear soluciones reales orientadas a rendimiento, automatización y buenas prácticas de arquitectura.
           </motion.p>
           <motion.div className="flex gap-4" variants={staggerItem}>
             <Button className="group">
@@ -103,31 +103,24 @@ export default function Home() {
           variants={staggerContainer}
         >
           <motion.div variants={staggerItem}>
-            <ExperienceCard
-              title="Senior Frontend Developer"
-              company="Tech Solutions Inc."
+          <ExperienceCard
+              title="Analista de Datos Internos"
+              company="Subsecretaría de Modernización, Innovación y Tecnología"
+              period="2022 - Presente"
+              description="Desarrollo de soluciones automatizadas para análisis y visualización de datos administrativos, optimizando procesos internos y mejorando el acceso a la información institucional."
+              technologies={["Python", "Pandas", "Automatización", "Procesamiento de datos"]}
+            />
+
+          </motion.div>
+          <motion.div variants={staggerItem}>
+          <ExperienceCard
+              title="Desarrollador Full Stack(Autónomo)"
+              company="Proyectos Personales"
               period="2021 - Presente"
-              description="Desarrollo de aplicaciones web utilizando React, Next.js y TypeScript. Implementación de arquitecturas escalables y optimización de rendimiento."
-              technologies={["React", "Next.js", "TypeScript", "Tailwind CSS"]}
+              description="Desarrollo de aplicaciones web full stack con autenticación, bases de datos relacionales, integración con inteligencia artificial y despliegue en la nube."
+              technologies={["Next.js", "React", "Node.js", "PostgreSQL", "Prisma", "NextAuth", "Render"]}
             />
-          </motion.div>
-          <motion.div variants={staggerItem}>
-            <ExperienceCard
-              title="Full Stack Developer"
-              company="Digital Innovations"
-              period="2018 - 2021"
-              description="Desarrollo full stack de aplicaciones web y móviles. Implementación de APIs RESTful y bases de datos."
-              technologies={["JavaScript", "Node.js", "Express", "MongoDB", "React Native"]}
-            />
-          </motion.div>
-          <motion.div variants={staggerItem}>
-            <ExperienceCard
-              title="Web Developer"
-              company="Creative Studio"
-              period="2016 - 2018"
-              description="Desarrollo de sitios web responsivos y aplicaciones interactivas para diversos clientes."
-              technologies={["HTML", "CSS", "JavaScript", "PHP", "MySQL"]}
-            />
+
           </motion.div>
         </motion.div>
       </section>
@@ -214,13 +207,10 @@ export default function Home() {
           <motion.div className="mb-10" variants={staggerItem}>
             <h3 className="text-xl font-semibold mb-4">Frontend</h3>
             <div className="flex flex-wrap gap-3">
-              <SkillBadge name="HTML5" icon={<Code className="h-4 w-4" />} />
-              <SkillBadge name="CSS3" icon={<Code className="h-4 w-4" />} />
-              <SkillBadge name="JavaScript" icon={<Code className="h-4 w-4" />} />
-              <SkillBadge name="TypeScript" icon={<Code className="h-4 w-4" />} />
               <SkillBadge name="React" icon={<Code className="h-4 w-4" />} />
               <SkillBadge name="Next.js" icon={<Code className="h-4 w-4" />} />
-              <SkillBadge name="Tailwind CSS" icon={<Code className="h-4 w-4" />} />
+              <SkillBadge name="TypeScript" icon={<Code className="h-4 w-4" />} />
+              <SkillBadge name="Tailwind" icon={<Code className="h-4 w-4" />} />
               <SkillBadge name="Framer Motion" icon={<Code className="h-4 w-4" />} />
             </div>
           </motion.div>
@@ -229,22 +219,26 @@ export default function Home() {
             <h3 className="text-xl font-semibold mb-4">Backend</h3>
             <div className="flex flex-wrap gap-3">
               <SkillBadge name="Node.js" icon={<Code className="h-4 w-4" />} />
-              <SkillBadge name="Express" icon={<Code className="h-4 w-4" />} />
-              <SkillBadge name="Python" icon={<Code className="h-4 w-4" />} />
-              <SkillBadge name="Django" icon={<Code className="h-4 w-4" />} />
-              <SkillBadge name="GraphQL" icon={<Code className="h-4 w-4" />} />
-              <SkillBadge name="REST APIs" icon={<Code className="h-4 w-4" />} />
+              <SkillBadge name="APIs REST" icon={<Code className="h-4 w-4" />} />
+              <SkillBadge name="NextAuth" icon={<Code className="h-4 w-4" />} />
+            </div>
+          </motion.div>
+
+          <motion.div className="mb-10" variants={staggerItem}>
+            <h3 className="text-xl font-semibold mb-4">Base de datos</h3>
+            <div className="flex flex-wrap gap-3">
+              <SkillBadge name="PostgreSQL" icon={<Code className="h-4 w-4" />} />
+              <SkillBadge name="Prisma ORM" icon={<Code className="h-4 w-4" />} />
             </div>
           </motion.div>
 
           <motion.div variants={staggerItem}>
-            <h3 className="text-xl font-semibold mb-4">Bases de Datos</h3>
+            <h3 className="text-xl font-semibold mb-4">Extra / IA</h3>
             <div className="flex flex-wrap gap-3">
-              <SkillBadge name="MongoDB" icon={<Code className="h-4 w-4" />} />
-              <SkillBadge name="PostgreSQL" icon={<Code className="h-4 w-4" />} />
-              <SkillBadge name="MySQL" icon={<Code className="h-4 w-4" />} />
-              <SkillBadge name="Firebase" icon={<Code className="h-4 w-4" />} />
-              <SkillBadge name="Redis" icon={<Code className="h-4 w-4" />} />
+              <SkillBadge name="OpenAI API" icon={<Code className="h-4 w-4" />} />
+              <SkillBadge name="Python" icon={<Code className="h-4 w-4" />} />
+              <SkillBadge name="Pandas" icon={<Code className="h-4 w-4" />} />
+              <SkillBadge name="Automatización" icon={<Code className="h-4 w-4" />} />
             </div>
           </motion.div>
         </motion.div>
@@ -265,15 +259,15 @@ export default function Home() {
               ¿Interesado en trabajar juntos? Contáctame a través de cualquiera de estos canales.
             </p>
             <div className="flex flex-col md:flex-row justify-center gap-6">
-              <Link href="mailto:tu@email.com" className="contact-link">
+              <Link href="mailto:guillegomez575@gmail.com" className="contact-link">
                 <Mail className="h-6 w-6 mr-2" />
-                tu@email.com
+                guillegomez575@gmail.com
               </Link>
-              <Link href="https://github.com/tuusuario" target="_blank" className="contact-link">
+              <Link href="https://github.com/ggEz75" target="_blank" className="contact-link">
                 <Github className="h-6 w-6 mr-2" />
                 GitHub
               </Link>
-              <Link href="https://linkedin.com/in/tuusuario" target="_blank" className="contact-link">
+              <Link href="https://linkedin.com/in/guillermo-gomez1209" target="_blank" className="contact-link">
                 <Linkedin className="h-6 w-6 mr-2" />
                 LinkedIn
               </Link>
@@ -291,7 +285,7 @@ export default function Home() {
         transition={{ duration: 0.6 }}
       >
         <div className="container mx-auto px-4 text-center text-gray-500">
-          <p>© {new Date().getFullYear()} Tu Nombre. Todos los derechos reservados.</p>
+          <p>© {new Date().getFullYear()} . Todos los derechos reservados.</p>
         </div>
       </motion.footer>
     </div>
